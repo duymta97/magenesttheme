@@ -1,0 +1,45 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/**
+ * @var \Magento\Theme\Block\Html\Header $block
+ */
+$welcomeMessage = $block->getWelcome();
+?>
+<?php if ($block->getShowPart() == 'welcome') : ?>
+    <li class="greet welcome" data-bind="scope: 'customer'">
+        <a href="#"  class="dropdown" onclick="jQuery(this).siblings('div').children('ul').toggleClass('active')"><i class="fas fa-user"></i></a>
+        <div>
+            <ul id="dropdown-account">
+                <li><a href="/customer/account/"><?= __('My Account') ?></a></li>
+                <!-- ko ifnot: customer().fullname  -->
+                <li><a href="/customer/account/login/referer/aHR0cDovL2xvY2FsaG9zdC5sb2NhbC8%2C/"><?= __('Sign in') ?></a></li>
+                <li><a href="/customer/account/create/"><?= __('Create an account') ?></a></li>
+                <!-- /ko -->
+                <!-- ko if: customer().fullname  -->
+                <li><a href="#"><?= __('My Wish List') ?></a></li>
+                <li><a href="#"><?= __('Compare Products')?></a></li>
+                <li><a href="/customer/account/logout/"><?= __('Sign out') ?></a></li>
+                <!-- /ko -->
+            </ul>
+        </div>
+    </li>
+    <script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "customer": {
+                        "component": "Magento_Customer/js/view/customer"
+                    }
+                }
+            }
+        }
+    }
+    </script>
+<?php elseif ($block->getShowPart() == 'other') :?>
+    <?= $block->getChildHtml() ?>
+<?php endif ?>
