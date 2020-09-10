@@ -6,5 +6,16 @@
         <move element="top.search" destination="header-wrapper" before="header.panel.wrapper" />
         <move element="header.panel.wrapper" destination="header-wrapper" before="minicart" />
         <referenceBlock name="advanced-search-link" remove="true" />
+<!--        <referenceBlock name="footer-container" remove="true" />-->
+<!--      <referenceContainer name="footer-container">-->
+<!--        <block class="Magento\Theme\Block\Html\Footer" name="footer" template="html/footer.phtml"/>-->
+<!--      </referenceContainer>-->
+      <referenceContainer name="footer">
+        <container name="footer-aboutus" label="Page Footer About Us" before="footer_links"></container>
+        <container name="footer-contact-info" label="Page Footer Contact" before="footer_links"></container>
+        <container name="footer-social" label="Page Footer Social" after="footer_links"></container>
+      </referenceContainer>
+      <move element="form.subscribe" destination="footer-container" before="footer"/>
+      <move element="copyright" destination="footer-container" after="-" />
     </body>
 </page>

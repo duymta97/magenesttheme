@@ -4,14 +4,16 @@
  */
 
 var config = {
-    paths: {
-        'fontawesome': 'https://kit.fontawesome.com/45811d7787'
-    },
-    shim: {
-        'fontawesome': ['jquery']
-    },
-    deps: [
-        'fontawesome',
-        'js/script'
-    ]
+  paths: {
+    'fontawesome': 'https://kit.fontawesome.com/45811d7787',
+    'owlCarousel': 'js/owl.carousel.min'
+  },
+  shim: {
+    'fontawesome': ['jquery'],
+    'owlCarousel': ['jquery']
+  },
+  deps: [
+    'fontawesome',
+    'js/script'
+  ]
 };

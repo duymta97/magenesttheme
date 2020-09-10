@@ -1,9 +1,14 @@
-require(['jquery'], function ($) {
+(function () {
+  require(["jquery", "owlCarousel"], function ($) {
     'use strict';
-    // function dropdown() {
-    //     $(".dropdown").click(function () {
-    //         // $(this).siblings()
-    //         alert("Duy beo");
-    //     })
-    // }
-});
+    $.noConflict();
+    /*$(document).ready(function () {
+      $(".owl-carousel").owlCarousel({
+        autoplay: true,
+        dots: false,
+        loop: true,
+        items: 4,
+       });
+    });*/
+  });
+})();

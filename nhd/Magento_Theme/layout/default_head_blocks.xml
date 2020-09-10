@@ -4,5 +4,6 @@
         <!--<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" src_type="url"/>-->
         <!--<script src="https://kit.fontawesome.com/45811d7787.js" src_type="url"/>-->
         <!--<script src="js/script.js"/>-->
+      <css src="css/owl.carousel.css" rel="stylesheet" type="text/css" />
     </head>
 </page>

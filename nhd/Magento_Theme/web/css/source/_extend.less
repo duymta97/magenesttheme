@@ -152,6 +152,81 @@
     }
 
   }
+
+  .page-footer{
+    .block{
+      &.newsletter{
+        max-width: 1280px;
+        width: unset;
+        display: flex;
+        margin: 0 auto;
+        .title{
+          display: block;
+          text-transform: uppercase;
+          padding: 5px 0;
+          margin-right: 10px;
+        }
+      }
+    }
+    .footer.content{
+      display: flex;
+      justify-content: space-between;
+      .block{
+        float: none;
+        display: inline-block;
+        &.newsletter{
+          max-width: 1280px;
+          display: flex;
+          margin: 0 auto;
+          .title{
+            display: block;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+    .copyright{
+      display: block;
+      max-width: 1280px;
+      margin: 10px auto;
+      text-align: center;
+      color: #6e6e6e;
+    }
+  }
+  .cms-index-index{
+    ol{
+      &.product-items{
+        display: flex;
+        justify-content: space-between;
+        .product-item{
+          position: relative;
+          width: 100% !important;
+          .product-item-inner{
+            position: absolute;
+            z-index: 99;
+            top: 210px;
+            display: none;
+          }
+          &:hover{
+            .product-item-inner{
+              display: block;
+            }
+          }
+        }
+      }
+    }
+    .pager{
+      display: none;
+    }
+  }
+  .customer-account-login{
+    .page-header{
+      display: none;
+    }
+    .page-footer{
+      display: none;
+    }
+  }
 }
 
 

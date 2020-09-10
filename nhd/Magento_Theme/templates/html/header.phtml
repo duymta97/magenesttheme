@@ -18,7 +18,7 @@ $welcomeMessage = $block->getWelcome();
         <li><a href="/customer/account/"><?= __('My Account') ?></a></li>
         <!-- ko ifnot: customer().fullname  -->
         <li><a href="/customer/account/login/"><?= __('Sign in') ?></a></li>
-        <li><a href="/customer/account/create/"><?= __('Create an account') ?></a></li>
+        <li class="item"><a href="/customer/account/create/"><?= __('Create an account') ?></a></li>
         <!-- /ko -->
         <!-- ko if: customer().fullname  -->
         <li><a href="#"><?= __('My Wish List') ?></a></li>
@@ -28,18 +28,19 @@ $welcomeMessage = $block->getWelcome();
       </ul>
     </div>
   </li>
-  <script type="text/x-magento-init">
-    {
+  <script type="text/javascript" xml="space">
+    type = "text/x-magento-init" >
+      {
         "*": {
-            "Magento_Ui/js/core/app": {
-                "components": {
-                    "customer": {
-                        "component": "Magento_Customer/js/view/customer"
-                    }
-                }
+          "Magento_Ui/js/core/app": {
+            "components": {
+              "customer": {
+                "component": "Magento_Customer/js/view/customer"
+              }
             }
+          }
         }
-    }
+      }
 
   </script>
 <?php elseif ($block->getShowPart() == 'other') : ?>
