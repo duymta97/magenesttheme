@@ -1,0 +1,31 @@
+
+<!--<button type="button" class="action" data-trigger="trigger">-->
+<!--  <span data-bind="i18n: 'Click Here'"></span>-->
+<!--</button>-->
+<div data-bind="mageInit: {
+        'Magento_Ui/js/modal/modal':{
+            'type': 'popup',
+            'trigger': '[data-trigger=trigger]',
+            'responsive': true,
+            'modalClass' : 'signup-popup'
+        }}">
+  <div class="content">
+    <div class="popup-signup">
+      <?= $this->getChildHtml() ?>
+    </div>
+  </div>
+</div>
+
+    <script type="text/x-magento-init">
+        {
+            "*": {
+                "Magento_Ui/js/core/app": {
+                    "components": {
+                        "modal_overlay": {
+                            "component": "Magento_Theme/js/register-popup"
+                        }
+                     }
+                }
+            }
+        }
+    </script>

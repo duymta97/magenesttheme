@@ -18,7 +18,9 @@ $welcomeMessage = $block->getWelcome();
         <li><a href="/customer/account/"><?= __('My Account') ?></a></li>
         <!-- ko ifnot: customer().fullname  -->
         <li><a href="/customer/account/login/"><?= __('Sign in') ?></a></li>
-        <li class="item"><a href="/customer/account/create/"><?= __('Create an account') ?></a></li>
+        <li><a class="trigger-auth-popup" href="javascript:void(0);" onClick="jQuery(this).parent().parent().removeClass('active')"><?= __('Sign in with Pop up') ?></a></li>
+        <li ><a href="/customer/account/create/"><?= __('Create an account') ?></a></li>
+        <li ><a data-trigger="trigger" onClick="jQuery(this).parent().parent().removeClass('active')"><?= __('Create an account with Popup') ?></a></li>
         <!-- /ko -->
         <!-- ko if: customer().fullname  -->
         <li><a href="#"><?= __('My Wish List') ?></a></li>

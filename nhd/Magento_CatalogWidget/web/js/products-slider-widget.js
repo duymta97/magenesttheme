@@ -1,7 +1,7 @@
 define(["jquery", "owlCarousel"], function ($) {
   'use strict';
   return function () {
-    $(".owl-carousel").owlCarousel({
+    $(".owl-carousel:first").owlCarousel({
       autoplay: true,
       dots: false,
       loop: true,
